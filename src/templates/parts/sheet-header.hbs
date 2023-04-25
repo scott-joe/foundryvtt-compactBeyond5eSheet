@@ -36,16 +36,17 @@
         <span class="bar" style="width: {{system.details.xp.pct}}%"></span>
       </div>
       <div class="experience flexrow">
-
-
         <span class="left-label">{{ localize "DND5E.Level" }} {{system.details.level}}</span>
-
         <input name="system.details.xp.value" type="text" value="{{system.details.xp.value}}" data-dtype="Number"
           placeholder="0" />
         <span class="sep">/</span>
         <span class="max">{{system.details.xp.max}}</span>
-
-        <span class="right-label">{{ localize "DND5E.Level" }} {{cb5es-add system.details.level 1}}</span>
+        <span class="right-label">
+          {{ localize "DND5E.Level" }} {{cb5es-add system.details.level 1}}
+          <button class="btn btn-5et btn-xxs ml-1 imp-cls__btn-sheet-level-up ve-flex-vh-center btn-pulse" type="button" title="Level Up" style="font-size: 10.5px;"
+            <i class="fas fa-fw fa-arrow-alt-circle-up mx-auto pl-1p"></i>
+          </button>
+        </span>
       </div>
     </aside>
     {{/unless}}
